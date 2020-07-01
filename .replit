@@ -1,4 +1,5 @@
 import requests
+
 # If you want to use classes
 # class Place:
 # would have attributes lat, long, name,
@@ -24,14 +25,16 @@ def get_weather_data(lat, lon):
 url = "https://api.climacell.co/v3/weather/real_time"
 
 payload = {
-  "apikey": "MlzJxYVk8vU6tjV0U4SNf9WKItn4fTzq","lat":25.1909, 
-  "lon":73.2854,
+  "apikey": "JXNHd6bLGvceafb8pSJtRgdZRTbHGpb4",
+  "lat": lat,
+  "lon": lon,
   "fields": ["temp", "precipitation", "wind_gust"],
   "unit_system":"us", 
-
    }
 
 response = requests.get(url, params=payload).json()
+
+get_weather_data(lat, lon,):
 
 print(response)
 
